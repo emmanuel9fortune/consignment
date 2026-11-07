@@ -1,0 +1,636 @@
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 10000;
+    background-color: #fff;
+    color: #202124;
+    border: 2px solid #fff;
+}
+
+#dark .header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 10000;
+    background-color: #202124;
+    color: #fff;
+}
+
+.desk_header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.desk_header_logo{
+    width: 20% ;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.desk_header_logo>h3{
+    width: 119.24px;
+    height: 20px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+#dark .desk_header_logo>h3{
+  color: #fff;
+}
+
+.desk_header_links{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #413686;
+    color: #fff;
+}
+
+.desk_header_img{
+    width: 60px;
+}
+
+.header_icon{
+    color: red;
+}
+
+.desk_header_links_drop{
+  position: relative;
+  display: inline-block;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.hover_drop_down{
+  position: absolute;
+  height: fit-content;
+  width: 200px;
+  top: 100%;
+  border-top: 2px solid #da291c;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.click_drop_down{
+  height: fit-content;
+  width: 90%;
+  border-top: 2px solid #da291c;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top:100% ;
+  z-index: 10000;
+  box-sizing: border-box;
+}
+
+.dropdown_slide_spacer{
+  height: 300px;
+  width: 100%;
+}
+
+.hover_drop_down_link{
+  padding: 20px;
+  width: 100%;
+  border-bottom: 1.5px solid #00000034;
+  text-decoration: none;
+  color: black;
+  z-index: 10000;
+}
+
+.hover_drop_down_link:hover{
+  border-left: 2px solid #da291c;
+  z-index: 10000;
+}
+
+.hover_drop_down_overlay{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 87vh;
+  width: 100vw;
+  background-color: #00000034;
+}
+
+.desk_header_links_drop_arrow{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.desk_header_links_drop_arrow>h3{
+    font-size: 16px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.desk_header_donate_btn{
+    width: 119.24px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #009ca6;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  .desk_header_donate_btn:active {
+    transform: scale(0.9); /* Shrinks button when clicked */
+  }
+
+.desk_header_donate_btn_icon {
+  display: inline-block;
+  transition: transform 1s ease-in-out;
+  animation: rotateSideways 1s linear infinite;
+}
+
+.desk_header_donate_btn_icon:hover {
+  transform: rotateX(360deg);
+}
+
+@keyframes rotateSideways {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.desk_header_donate_btn>h3{
+    font-weight: 800;
+    padding: 0 5px;
+}
+
+.mobile_header{
+    display: none;
+}
+
+
+.menu-icon {
+    width: 40px;
+    height: 30px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+    margin: 0 10px;
+  }
+ 
+  .menu-icon span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    --tw-bg-opacity: 1;
+    background-color: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    margin: 5px 0;
+  }
+ 
+  /* Menu open state */
+  .menu-icon.open span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+ 
+  .menu-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+ 
+  .menu-icon.open span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+ 
+  .menu_dropDown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 0;
+    transition: height .3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+  }
+
+  #dark .menu_dropDown{
+    background-color: #202124;
+  }
+
+  .menu_dropDown::-webkit-scrollbar{
+    display: none;
+  }
+ 
+  .dropDown {
+    padding: 80px 0;
+    height: 100%;
+  }
+ 
+  .dropdown_slide {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    background-color: #d1d1d11a;
+    border-radius: 5px;
+    height: 50px;
+    padding: 15px;
+    justify-content: space-between;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+    position: relative;
+    border: 1px solid #d1d1d134;
+  }
+  
+ 
+
+  .dropdown_slide>h3 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #606261;
+  }
+ 
+  .dropdown_slide_sign_btn {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    background-color: #ffba00;
+    color: #fff;
+    border-radius: 5px;
+    height: 50px;
+    padding: 15px;
+    justify-content: space-between;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+    position: relative;
+  }
+  
+ 
+
+  .dropdown_slide_sign_btn>h3 {
+    font-size: 19px;
+    font-weight: 600;
+  }
+ 
+  .menu_mobile_logbtn {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    --tw-bg-opacity: 1;
+    background-color: #009ca6;
+    color: white;
+    border-radius: 5px;
+    height: 45px;
+    padding: 15px;
+    font-size: 25;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  .menu_mobile_logbtn:active {
+    transform: scale(0.9); /* Shrinks button when clicked */
+  }
+
+  .desk_header_donate_btns{
+    display: flex;
+    align-items: center;
+  } 
+
+
+  .donate_header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: 0;
+    transition: height .3s ease-in-out;
+    z-index: 100000;
+  }
+  
+  .donate_dropDown {
+    padding-top: 0px;
+    height: 100vh;
+  }
+
+  .donate_header_container{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  .donate_img_overlay{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:#00000043;
+    color: white;
+    padding: 0 20px;
+  }
+
+  .donate_img_overlay>h1{
+    font-size: 70px;
+    font-weight: 800;
+    margin-bottom: 5px;
+  }
+
+  .donate_img_overlay>p{
+    font-size: 18.7px;
+  }
+
+  .close_donate_container{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+
+  .close_donate{
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    /* padding: 20px; */
+    border-radius: 5px;
+  }
+  
+
+  .close_donate span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    --tw-bg-opacity: 1;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+ 
+  /* Menu open state */
+  .close_donate span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+ 
+  .close_donate span:nth-child(2) {
+    opacity: 0;
+  }
+ 
+  .close_donate span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .header_signup_btn{
+    background-color: #202124;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ._header_{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  ._header_box{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    width: 250px;
+  }
+
+  ._header_icon{
+    width: 40px;
+    height: 40px;
+    background-color: #413686;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  ._header_txt{
+    margin: 0 10px;
+  }
+
+  ._header_txt p{
+    font-size: 13px;
+  }
+
+  ._header_txt p:nth-child(1){
+    color: #413686;
+    font-weight: 600;
+  }
+
+  ._header_txt p:nth-child(2){
+    color: #ffba00;
+    font-weight: 600;
+    font-size: 11px;
+  }
+  
+  ._desk_header_{
+    background-color: #ffba00;
+    height: 30px;
+    width: 100%;
+  }
+
+  .banner{
+    width: 100%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1290px) {
+  
+  .desk_header_links_drop_arrow{
+      display: flex;
+      align-items: center;
+      margin: 0;
+      cursor: pointer;
+  }
+
+  .desk_header_links_drop_arrow>h3{
+      font-size: 15px;
+      margin: 0 10px;
+      font-weight: 600;
+  }
+
+  .desk_header_links{
+    width: 90%;
+  }
+}
+
+
+
+
+@media (max-width: 1100px) {
+  ._header{
+    display: none;
+  }
+    .desk_header{
+        display: none;
+    }
+
+    .mobile_header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+        height: 80px;
+    }
+    
+    .desk_header_logo{
+        width: 150px;
+        display: flex;
+        align-items: center;
+    }
+
+    .desk_header_logo>h3{
+        width: 100%;
+        height: 20px;
+        font-size: 15px;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+
+    .desk_header_donate_btns{
+      display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 890px) {
+  .donate_header_container{
+    width: 100%;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 630px) {
+  .donate_img{
+    display: none;
+  }
+
+  .donate_dropDown{
+    width: 100%;
+    padding-top: 20px;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 340px) {
+    .desk_header_donate_btn{
+        display: none;
+    }
+}

@@ -1,0 +1,230 @@
+.pack_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10%;
+    margin: 50px 0;
+}
+
+.pack_container_boxes{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pack_container_box{
+    position: relative;
+    height: 250px;
+}
+
+.pack_container_box>h1, .pack_container_box2>h1, .pack_container_box3>h1{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: grey;
+}
+
+.pack_container_box{
+    width: 33.3%;
+    background: linear-gradient(90deg, #052c69f2, #0f43964d), url(/public/assets/truck2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pack_container_box3{
+    height: 250px;
+    width: 33.3%;
+    background: linear-gradient(90deg, #052c69f2, #0f43964d), url(/public/assets/ship.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pack_container_box2{
+    width: 33.3%;
+    position: relative;
+    height: 300px;
+    background: linear-gradient(90deg, #ffba00, #ffbb0067), url(/public/assets/port.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pack_container_box div, .pack_container_box2 div, .pack_container_box3 div{
+    padding: 50px 10px;
+    color: #fff;
+}
+
+.latest_box{
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.latest_1{
+    width: 100%;
+    height: 250px;
+    background-image: url(/public/assets/truck.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.latest_2{
+    width: 100%;
+    height: 250px;
+    background-image: url(/public/assets/plane2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.latest_3{
+    width: 100%;
+    height: 250px;
+    background-image: url(/public/assets/ship.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.latest_box div{
+    padding: 20px 10px;
+    background-color: #413686;
+    color: #fff;
+}
+
+.latest_box div h3{
+    font-size: 25px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.latest_box div p{
+    font-size: 15px;
+    line-height: 23px;
+}
+
+.pat_contain{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 80px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pat_contain img{
+    width: 150px;
+}
+
+.pat_contain_{
+    width: 50%;
+}
+
+.pat_contain_img{
+    width: 50%;
+    height: 600px;
+    background: linear-gradient(90deg, #ffba00, #ffbb0041), url(/public/assets/truck2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pat_contain_{
+    background-color: #413686;
+    color: #fff;
+    height: 450px;
+    margin-right: -100px;
+    z-index: 100;
+    padding: 20px;
+}
+
+.pat_contain_ h1{
+    margin: 20px 0;
+}
+
+.pat_contain_ p{
+    margin: 10px 0;
+    line-height: 25px;
+}
+
+.pat_contain_ h3{
+    margin: 20px 0;
+}
+
+.pat_contain_box{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+@media (max-width: 1100px) {
+    .pack_container{
+        padding: 3%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 650px) {
+    .pack_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pack_container_boxes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pack_container_box, .pack_container_box2, .pack_container_box3{
+        width: 100%;
+    }
+
+    .latest_box{
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .latest_box div{
+        width: 100%;
+    }
+
+    .pat_contain:nth-child(3){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pat_contain img{
+        width: 120px;
+    }
+
+    .pat_contain_{
+        width: 100%;
+        margin: 0;
+        height: fit-content;
+    }
+    
+    .pat_contain_img{
+        width: 100%;
+        height: 300px;
+    }
+}

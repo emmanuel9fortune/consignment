@@ -1,0 +1,291 @@
+.sub_banner{
+    width: 100%;
+    height: 400px;
+    background-image: url('/public/assets/sub.jpg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.track_order{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.track_order>p{
+    margin: 20px 0;
+}
+
+.track_order input {
+    border: 2px solid grey;
+}
+
+.about_us{
+    width: 100%;
+    padding: 0 10%;
+    display: flex;
+}
+
+.about_us1 {
+    width: 70%;
+}
+
+.about_us1 h1{
+    margin: 20px 0;
+    color: #413686;
+}
+
+.about_us1 h3{
+    margin: 10px 0;
+}
+
+.about_us1 p{
+    margin: 15px 0;
+    line-height: 25px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.about_usp{
+    color: grey;
+}
+
+.about_us1>div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about_us1>div>div{
+    width: 50%;
+}
+
+.about_us2{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about_us2_img1{
+    background-image: url('/public/assets/truck.jpg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 250px;
+}
+
+.about_us2_img2{
+    background-image: url('/public/assets/truck3.jpg');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 250px;
+}
+
+.about_us2_box1{
+    width: fit-content;
+    padding: 10px;
+    border: .3px solid #8080803f;
+}
+
+.about_us2_box1 p{
+    margin: 10px 0;
+    color: #ffba00;
+}
+
+.about_us2_box1_{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    background-color: #ffba00;
+    color: #fff;
+    width: 100%;
+    padding: 20px 15px;
+}
+
+.about_us2_box1_ h3{
+    margin: 0 10px;
+}
+
+.members_container{
+    width: 100%;
+    padding: 0 10%;
+}
+
+.members_container h1{
+    margin: 100px 0 0 0;
+}
+
+.members_container p{
+    margin: 0 0 10px 0;
+    line-height: 25px;
+}
+
+.members{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.members_box{
+    width: 25%;
+}
+
+.members_box_img1{
+    background-image: url('/public/assets/mem1.jpg');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+}
+
+.members_box_img2{
+    background-image: url('/public/assets/mem2.jpg');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+}
+
+.members_box_img3{
+    background-image: url('/public/assets/mem3.jpg');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+}
+
+.members_box_img4{
+    background-image: url('/public/assets/mem4.jpg');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 250px;
+}
+
+.members_box h3{
+    margin: 10px 30px 0 30px;
+}
+
+.members_box p{
+    margin: 0 30px;
+}
+
+.about_img_{
+    background-image: url('/public/assets/port.jpg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 550px;
+    margin: 20px 0;
+}
+
+.about_us2_img3{
+    background-image: url('/public/assets/dboy2.jpg');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 550px;
+}
+
+.about_us2_box1 h3{
+    margin: 15px 0;
+    font-size: 16px;
+    font-size: 500;
+    text-transform: uppercase;
+    color: #413686;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.233);
+}
+
+.about_us1 ul li{
+    margin: 10px 0;
+}
+
+.contact_img{
+    background-image: url(/public/assets/contact.webp);
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1300px) {
+    .about_us{
+        padding: 0 3%;
+    }
+
+    .members_container{
+        padding: 0 3%;
+    }
+
+    .about_us1 {
+        flex: 1;
+    }
+    
+}
+
+
+
+@media (max-width: 1100px) {
+    .about_us{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about_us1{
+        width: 100%;
+    }
+    .about_us2{
+        width: 100%;
+    }
+    .about_us2_img1{
+        width: 100%;
+    }
+    .about_us2_img2{
+        width: 100%;
+    }
+    .members_box{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 680px) {
+    .about_us1>div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about_us1>div>div{
+        width: 100%;
+    }
+
+    .members_box{
+        width: 100%;
+    }
+}
