@@ -206,13 +206,15 @@ const Pdffile=({info})=>{
 
             <View style={styles.mid2}>
                 <View style={styles.mid2_box}>
-                <Text>Qty</Text>
-                <Text>{info?.quantity}</Text>
-                </View>
-                <View style={styles.mid2_box}>
                   <Text>Description</Text>
                   <Text style={styles.mid2_box_txt} >{info?.description}</Text>
                 </View>
+                
+                <View style={styles.mid2_box}>
+                <Text>Qty</Text>
+                <Text>{info?.quantity}</Text>
+                </View>
+
                 <View style={styles.mid2_box}>
                   <Text>Status</Text>
                   <Text>{info?.status}</Text>
@@ -221,24 +223,42 @@ const Pdffile=({info})=>{
                   info?.duty !== '0' &&
                   <View style={styles.mid2_box}>
                     <Text>Duties</Text>
-                    <Text  style={styles.mid2_box_txt} >$ {info?.duty} PENDING</Text>
+                    <Text  style={styles.mid2_box_txt} >$ {info?.duty} {info?.duty ? info?.duty_amount_status ? "paid" : "unpaid" : null}</Text>
                   </View>
                 }
                 {
                   info?.tax !== '0' &&
                   <View style={styles.mid2_box}>
                     <Text>Taxes</Text>
-                    <Text  style={styles.mid2_box_txt} >$ {info?.tax} PENDING</Text>
+                    <Text  style={styles.mid2_box_txt} >$ {info?.tax} {info?.tax ? info?.tax_amount_status ? "paid" : "unpaid" : null}</Text>
                   </View>
                 }
                 <View style={styles.mid2_box}>
                   <Text>Shipping Cost</Text>
-                  <Text  style={styles.mid2_box_txt} >$ {info?.amount} PAID</Text>
+                  <Text  style={styles.mid2_box_txt} >$ {info?.amount} {Number(info?.amount) !== 0 ? info?.ship_amount_status ? "paid" : "unpaid" : null}</Text>
                 </View>
                 
                 <View style={styles.mid2_box}>
                   <Text>Total Cost</Text>
-                  <Text style={styles.mid2_box_txt} >$ {Number(info?.duty) + Number(info?.tax)} UNPAID </Text>
+                  <Text style={styles.mid2_box_txt} >$ { 
+                    !info?.ship_amount_status ? 
+                      info?.amount : 
+                      info?.duty_amount_status && info?.tax_amount_status ?
+                      Number(info?.duty) + Number(info?.tax)
+                      : info?.duty_amount_status ?
+                        Number(info?.tax)
+                      : info?.tax_amount_status ?
+                        Number(info?.duty)
+                      : 0
+                    } {
+                      info?.amount === 0 && info?.duty === 0 && info?.tax === 0 ? 
+                        info?.ship_amount_status ? 
+                          "paid" : 
+                          info?.duty_amount_status && info?.tax_amount_status ?
+                          "paid"
+                          : "unpaid"
+                      : null
+                    } </Text>
                 </View>
             </View>
 

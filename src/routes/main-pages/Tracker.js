@@ -148,8 +148,8 @@ function Tracker() {
                     <h4>WEIGHT</h4>
                     <p>{info?.weight}</p>
                 </div>
-                <div className='trac_box_'>
-                    <h4>DESCRIPTION</h4>
+                <div className='trac_box_'  style={{width:'100%', display:'flex', flexDirection:'column'}}>
+                    <h4 style={{width:'100%', marginBottom:'10px'}}>DESCRIPTION</h4>
                     <p>{info?.description}</p>
                 </div>
             </div>
