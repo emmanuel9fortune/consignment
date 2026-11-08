@@ -4,10 +4,16 @@ import { Link } from 'react-router-dom'
 import BottomBar from '../../components/Footer'
 import { FaBox, FaFile, FaPlane, FaShip } from 'react-icons/fa6'
 import { FaCar, FaFilePdf } from 'react-icons/fa'
+import SEO from '../../components/SEO'
 
 function About() {
   return (
     <div>
+        <SEO
+            title="Elite Global Transit | International Shipping & Logistics"
+            description="Discover reliable international shipping, freight forwarding, cargo transportation and logistics services with Elite Global Transit."
+            path="/"
+        />
         <Header/>
         <div className='sub_banner'>
             <div className='banner_container_overlay' style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', paddingTop:'50px'}} >

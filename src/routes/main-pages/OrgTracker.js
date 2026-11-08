@@ -12,6 +12,7 @@ import Pdffile from '../../components/PdfFile'
 import { PDFDownloadLink } from '@react-pdf/renderer'
 import { PDFViewer} from '@react-pdf/renderer'
 import Loader from '../../Loader'
+import SEO from '../../components/SEO'
 
 function Tracker() {
 
@@ -50,6 +51,11 @@ function Tracker() {
 
   return (
     <div style={{width:'100%', display:'flex', flexDirection:'column', alignItems:'center'}}>
+        <SEO
+            title="Elite Global Transit | International Shipping & Logistics"
+            description="Discover reliable international shipping, freight forwarding, cargo transportation and logistics services with Elite Global Transit."
+            path="/"
+        />
         <Header track={true} />
         <div style={{width:'100%', height:'150px'}} ></div>
 

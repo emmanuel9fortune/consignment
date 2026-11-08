@@ -6,6 +6,7 @@ import BottomBar from '../../components/Footer'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import { db } from '../../firebase'
+import SEO from '../../components/SEO'
 
 function TrackOrder() {
 
@@ -45,6 +46,11 @@ function TrackOrder() {
 
   return (
     <div>
+        <SEO
+        title="Elite Global Transit | International Shipping & Logistics"
+        description="Discover reliable international shipping, freight forwarding, cargo transportation and logistics services with Elite Global Transit."
+        path="/"
+      />
         <Header/>
         <div className='sub_banner'>
             <div className='banner_container_overlay' style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', paddingTop:'50px'}} >
