@@ -11,7 +11,7 @@ function Request() {
         <SEO
             title="Elite Global Transit | International Shipping & Logistics"
             description="Discover reliable international shipping, freight forwarding, cargo transportation and logistics services with Elite Global Transit."
-            path='/request-quote
+            path='/request-quote'
         />
         <Header/>
         <div className='sub_banner'>
