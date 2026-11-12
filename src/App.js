@@ -11,6 +11,7 @@ import "./leafLetFix";
 import { ToastContainer } from 'react-toastify';
 import Loader from './Loader';
 import ScrollToTop from './ScrollToTop';
+import CookieConsent from './CookieConsent';
 
 function App() {
 
