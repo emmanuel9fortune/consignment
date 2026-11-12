@@ -8,11 +8,11 @@ import SEO from '../../components/SEO'
 
 function Services() {
   return (
-    <div>
+    <>
         <SEO
             title="Elite Global Transit | International Shipping & Logistics"
             description="Discover reliable international shipping, freight forwarding, cargo transportation and logistics services with Elite Global Transit."
-            path="/"
+            path="/services"
         />
         <Header/>
         <div className='sub_banner'>
@@ -115,7 +115,7 @@ function Services() {
 
         <div style={{width:'100%', height:'50px'}} ></div>
         <BottomBar/>
-    </div>
+    </>
   )
 }
 
