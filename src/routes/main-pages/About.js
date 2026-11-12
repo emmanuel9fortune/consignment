@@ -8,12 +8,13 @@ import SEO from '../../components/SEO'
 
 function About() {
   return (
-    <div>
-        <SEO
+    <>
+    <SEO
             title="Elite Global Transit | International Shipping & Logistics"
             description="Discover reliable international shipping, freight forwarding, cargo transportation and logistics services with Elite Global Transit."
             path="/"
         />
+    <div>
         <Header/>
         <div className='sub_banner'>
             <div className='banner_container_overlay' style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', paddingTop:'50px'}} >
@@ -147,6 +148,7 @@ function About() {
 
         <BottomBar/>
     </div>
+  </>
   )
 }
 
