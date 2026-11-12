@@ -42,6 +42,7 @@ function App() {
 
   return (
     <div className='App'>
+    <CookieConsent />
       <ToastContainer style={{zIndex:9999999}} />
       <HashRouter>
         <ScrollToTop setloading={setloading}/>
