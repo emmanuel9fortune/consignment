@@ -12,7 +12,7 @@ function Services() {
         <SEO
             title="Elite Global Transit | International Shipping & Logistics"
             description="Discover reliable international shipping, freight forwarding, cargo transportation and logistics services with Elite Global Transit."
-            path="/services"
+            path="/#/services"
         />
         <Header/>
         <div className='sub_banner'>
