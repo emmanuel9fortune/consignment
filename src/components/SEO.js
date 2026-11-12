@@ -1,62 +1,118 @@
 
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
 const SITE_URL = "https://eliteglobaltransit.com";
 
-export default function SEO({
-  title = "Elite Global Transit | Global Shipping & Logistics",
-  description = "Elite Global Transit provides reliable international shipping, freight forwarding, cargo transportation and global logistics solutions.",
+function makeAbsoluteUrl(value) {
+  if (!value) return "";
+
+  if (/^https?:\/\//i.test(value)) {
+    return value;
+  }
+
+  return `${SITE_URL}${value.startsWith("/") ? "" : "/"}${value}`;
+}
+
+function SEO({
+  title = "Global Shipping & Logistics",
+  description = "Elite Global Transit provides shipping, logistics and transportation solutions.",
   path = "/",
-  image = "/images/seo-cover.jpg",
+  image = "/og-image.jpg",
   noIndex = false,
-  schema = null,
 }) {
-  const canonical = `${SITE_URL}${path}`;
+  const normalizedPath = path.startsWith("/")
+    ? path
+    : `/${path}`;
 
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Elite Global Transit",
-    url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
-    description,
-  };
+  const canonicalUrl =
+    normalizedPath === "/"
+      ? `${SITE_URL}/`
+      : `${SITE_URL}${normalizedPath.replace(/\/+$/, "")}`;
 
-  return (
-    <Helmet>
-      <title>{title}</title>
+  const fullTitle = `${title} | Elite Global Transit`;
 
-      <meta name="description" content={description} />
+  const imageUrl = makeAbsoluteUrl(image);
 
-      <meta
-        name="robots"
-        content={
-          noIndex
-            ? "noindex, nofollow"
-            : "index, follow"
-        }
-      />
+  const robotsContent = noIndex
+    ? "noindex, nofollow"
+    : "index, follow";
 
-      <link rel="canonical" href={canonical} />
+  return React.createElement(
+    Helmet,
+    null,
 
-      {/* Open Graph */}
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Elite Global Transit" />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={canonical} />
-      <meta property="og:image" content={`${SITE_URL}${image}`} />
+    // Basic SEO
+    React.createElement("title", null, fullTitle),
 
-      {/* Twitter / X */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${SITE_URL}${image}`} />
+    React.createElement("meta", {
+      name: "description",
+      content: description,
+    }),
 
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(schema || organizationSchema)}
-      </script>
-    </Helmet>
+    React.createElement("meta", {
+      name: "robots",
+      content: robotsContent,
+    }),
+
+    // Canonical URL
+    React.createElement("link", {
+      rel: "canonical",
+      href: canonicalUrl,
+    }),
+
+    // Open Graph
+    React.createElement("meta", {
+      property: "og:type",
+      content: "website",
+    }),
+
+    React.createElement("meta", {
+      property: "og:site_name",
+      content: "Elite Global Transit",
+    }),
+
+    React.createElement("meta", {
+      property: "og:title",
+      content: fullTitle,
+    }),
+
+    React.createElement("meta", {
+      property: "og:description",
+      content: description,
+    }),
+
+    React.createElement("meta", {
+      property: "og:url",
+      content: canonicalUrl,
+    }),
+
+    React.createElement("meta", {
+      property: "og:image",
+      content: imageUrl,
+    }),
+
+    // Twitter / X Cards
+    React.createElement("meta", {
+      name: "twitter:card",
+      content: "summary_large_image",
+    }),
+
+    React.createElement("meta", {
+      name: "twitter:title",
+      content: fullTitle,
+    }),
+
+    React.createElement("meta", {
+      name: "twitter:description",
+      content: description,
+    }),
+
+    React.createElement("meta", {
+      name: "twitter:image",
+      content: imageUrl,
+    })
   );
 }
+
+export default SEO;
