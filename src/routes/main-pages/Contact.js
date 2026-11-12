@@ -6,7 +6,7 @@ import SEO from '../../components/SEO'
 
 function Contact() {
   return (
-    <div>
+    <>
         <SEO
             title="Elite Global Transit | International Shipping & Logistics"
             description="Discover reliable international shipping, freight forwarding, cargo transportation and logistics services with Elite Global Transit."
@@ -66,7 +66,7 @@ function Contact() {
         </div>
 
         <BottomBar/>
-    </div>
+    </>
   )
 }
 
