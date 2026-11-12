@@ -9,12 +9,13 @@ import '../../styles/home.css'
 
 const EditorPage = () => {
   return (
-    <div className='home'>
-      <SEO
+    <>
+    <SEO
         title="Elite Global Transit | International Shipping & Logistics"
         description="Discover reliable international shipping, freight forwarding, cargo transportation and logistics services with Elite Global Transit."
         path="/"
       />
+    <div className='home'>
       <Header/>
       <Banner/>
       <Quote/>
@@ -22,6 +23,7 @@ const EditorPage = () => {
       <Latest/>
       <BottomBar/>
     </div>
+  </>
   );
 };
 
